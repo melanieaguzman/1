@@ -12,6 +12,7 @@ var siete = document.getElementById("numero7");
 var ocho = document.getElementById("numero8");
 var nueve = document.getElementById("numero9");
 var suma = document.getElementById("suma");
+var resta = document.getElementById("resta");
 var raiz = document.getElementById("raiz");
 var pot = document.getElementById("potencia");
 var igual = document.getElementById("igual");
@@ -55,6 +56,13 @@ var op;
         op = resul.innerHTML;
         resul.innerHTML="";
     }
+    resta.onclick = function(){
+        n1 = resul.innerHTML; 
+        resul.innerHTML ="-";
+        op = resul.innerHTML;
+        resul.innerHTML="";
+    }
+
     raiz.onclick = function(){
         n1 = resul.innerHTML; 
         resul.innerHTML ="√";
@@ -75,6 +83,11 @@ var op;
            case "^":
                resul.innerHTML = Math.pow(parseFloat(n1), parseFloat(resul.innerHTML)); 
                break;  
+            case "-":
+                resul.innerHTML = parseFloat(n1)-parseFloat(resul.innerHTML);
+                break;  
+            
+
            
        }
     }
