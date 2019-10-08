@@ -13,6 +13,7 @@ var ocho = document.getElementById("numero8");
 var nueve = document.getElementById("numero9");
 var suma = document.getElementById("suma");
 var resta = document.getElementById("resta");
+var multi = document.getElementById("multiplicar");
 var raiz = document.getElementById("raiz");
 var pot = document.getElementById("potencia");
 var igual = document.getElementById("igual");
@@ -62,6 +63,12 @@ var op;
         op = resul.innerHTML;
         resul.innerHTML="";
     }
+    multi.onclick = function(){
+        n1 = resul.innerHTML; 
+        resul.innerHTML ="x";
+        op = resul.innerHTML;
+        resul.innerHTML="";
+    }
 
     raiz.onclick = function(){
         n1 = resul.innerHTML; 
@@ -85,6 +92,9 @@ var op;
                break;  
             case "-":
                 resul.innerHTML = parseFloat(n1)-parseFloat(resul.innerHTML);
+                break;  
+            case "x":
+                resul.innerHTML = parseFloat(n1)*parseFloat(resul.innerHTML);
                 break;  
             
 
